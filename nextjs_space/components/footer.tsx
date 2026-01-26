@@ -17,19 +17,8 @@ export default function Footer() {
           <div className="flex flex-wrap justify-center gap-6">
             <Link href="/" className="text-gray-400 hover:text-white transition-colors">Home</Link>
             <Link href="/beneficios" className="text-gray-400 hover:text-white transition-colors">Benefícios</Link>
-            <Link href="/pacotes" className="text-gray-400 hover:text-white transition-colors">Pacotes</Link>
-            <Link href="/produtos" className="text-gray-400 hover:text-white transition-colors">Produtos</Link>
+            <Link href="/planos" className="text-gray-400 hover:text-white transition-colors">Planos</Link>
           </div>
-
-          <a
-            href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-green-600 hover:bg-green-700 px-6 py-3 rounded-full font-medium transition-colors"
-          >
-            <MessageCircle className="w-5 h-5" />
-            Fale Conosco
-          </a>
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500">

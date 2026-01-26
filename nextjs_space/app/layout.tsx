@@ -1,10 +1,17 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
+import WhatsAppButton from '@/components/whatsapp-button';
+import { Montserrat } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const playfair = Playfair_Display({ 
+  subsets: ['latin'], 
+  variable: '--font-playfair',
+  style: ['normal', 'italic'],
+});
 
 export const dynamic = 'force-dynamic';
 
@@ -23,22 +30,29 @@ export const metadata: Metadata = {
   },
 };
 
+const montserrat = Montserrat({ 
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-montserrat', // criamos uma variável CSS
+});
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-br" className={montserrat.variable}>
       <head>
         <script src="https://apps.abacus.ai/chatllm/appllm-lib.js"></script>
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${playfair.variable} font-sans`}>
         <Navbar />
         <main className="min-h-screen">
           {children}
         </main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

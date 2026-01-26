@@ -126,13 +126,15 @@ export default function BeneficiosPage() {
             <p className="text-purple-100 mb-8 text-lg">
               Conheça nossas automações e comece a economizar tempo hoje.
             </p>
-            <Link
-              href="/produtos"
+            <a
+              href="https://wa.me/5551997055060?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20planos%20Ize."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-[#7C3AED] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
               <Rocket className="w-5 h-5" />
-              Ver Automações
-            </Link>
+              Falar com especialista
+            </a>
           </div>
         </motion.div>
       </div>
