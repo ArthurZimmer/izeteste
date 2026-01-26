@@ -1,5 +1,7 @@
 'use client';
 
+// remover esse arquivo
+
 import { motion } from 'framer-motion';
 import { MessageCircle, ArrowLeft, Check, Zap, Building2, Users } from 'lucide-react';
 import Link from 'next/link';

@@ -1,5 +1,7 @@
 'use client';
 
+// remover esse arquivo
+
 import { motion } from 'framer-motion';
 import { Calendar, ArrowLeft, Check, MessageCircle, Briefcase, Scissors, Stethoscope } from 'lucide-react';
 import Link from 'next/link';

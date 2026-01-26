@@ -143,10 +143,6 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Link
-                  href={`/produtos/${category?.slug ?? ''}`}
-                  className="block group"
-                >
                   <div className={`${category?.bgColor ?? ''} p-8 rounded-3xl hover-lift transition-all group-hover:shadow-2xl`}>
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${category?.color ?? ''} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                       {category?.icon && <category.icon className="w-8 h-8 text-white" />}
@@ -158,7 +154,6 @@ export default function Home() {
                       {category?.description ?? ''}
                     </p>
                   </div>
-                </Link>
               </motion.div>
             ))}
           </div>

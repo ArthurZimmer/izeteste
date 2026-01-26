@@ -1,5 +1,7 @@
 'use client';
 
+// remover esse arquivo
+
 import { motion } from 'framer-motion';
 import { Instagram, ArrowLeft, Check, MessageCircle, Send, MessageSquare, Image } from 'lucide-react';
 import Link from 'next/link';
