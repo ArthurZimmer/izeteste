@@ -3234,6 +3234,10 @@ body {
 
 @media (min-width: 1024px) {
 
+  .lg\:max-w-7xl {
+    max-width: 80rem;
+  }
+
   .lg\:scale-105 {
     --tw-scale-x: 1.05;
     --tw-scale-y: 1.05;

@@ -83,13 +83,13 @@ export default function Home() {
       {/* Hero Section - Dark Style with Workflow Background */}
       <section className="min-h-screen flex items-center justify-center hero-dark-bg pt-16 relative overflow-hidden">
         <WorkflowBackground />
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center relative z-10">
-          <motion.div
+        <div className="max-w-5xl lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center relative z-10">
+            <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-serif text-5xl sm:text-5xl md:text-6xl lg:text-6xl font-bold mb-20 leading-tight flex flex-nowrap items-center justify-center gap-1 whitespace-nowrap">
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold mb-20 leading-tight flex items-center justify-center gap-1 flex-wrap">
               <span className="--foreground">Visual</span>
               <IzeNode delay={0.5} color="lime" />
               <span className="--foreground">,</span>
