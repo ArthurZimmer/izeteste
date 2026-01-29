@@ -89,7 +89,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold mb-20 leading-tight flex items-center justify-center gap-1 flex-wrap">
+            <h1 className="font-serif text-5xl sm:text-5xl md:text-6xl lg:text-6xl font-bold mb-20 leading-tight flex items-center justify-center gap-1 flex-wrap">
               <span className="--foreground">Visual</span>
               <IzeNode delay={0.5} color="lime" />
               <span className="--foreground">,</span>
