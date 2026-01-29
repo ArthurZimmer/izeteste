@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Calendar, Mail, Instagram, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 import { WorkflowBackground } from '@/components/workflow-background';
+import Image from 'next/image';
 
 function IzeNode({ delay, color }: { delay: number; color: 'lime' | 'purple' }) {
   const bgColor = color === 'lime'
@@ -115,6 +116,65 @@ export default function Home() {
               Conheça nossos planos
             </Link>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Por que fazemos isso? Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Por que <span className="gradient-text">fazemos isso?</span>
+              </h2>
+              <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
+                <p>
+                  Acreditamos que toda empresa, independente do tamanho, merece ter acesso a 
+                  tecnologias que transformam a sua eficiência e produtividade.
+                </p>
+                <p>
+                  Nossa missão é democratizar o poder da automação utilizando agentes de IA, 
+                  tornando-as acessíveis e fáceis de implementar para negócios de todos os portes.
+                </p>
+                <p>
+                  Queremos que você possa focar no que realmente importa: fazer seu negócio 
+                  crescer, enquanto nossa tecnologia cuida do resto.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl hover-lift">
+                <Image
+                  src="/img/home_page_1.svg"
+                  alt="Por que fazemos isso"
+                  width={600}
+                  height={500}
+                  className="w-full h-auto"
+                  priority
+                />
+                {/* Decorative gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#7C3AED]/10 to-[#a3e635]/10 pointer-events-none"></div>
+              </div>
+              
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#a3e635]/20 rounded-full blur-2xl"></div>
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-[#7C3AED]/20 rounded-full blur-2xl"></div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
