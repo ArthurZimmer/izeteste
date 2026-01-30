@@ -1,8 +1,11 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { TrendingUp, DollarSign, Clock, Users, Target, ShieldCheck, Rocket, Heart, BarChart3 } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { ArrowRight, Calendar, Mail, Instagram, MessageCircle } from 'lucide-react';
+import { WorkflowBackground } from '@/components/workflow-background';
+import Image from 'next/image';
 
 export default function BeneficiosPage() {
   const benefits = [
@@ -35,25 +38,11 @@ export default function BeneficiosPage() {
       color: 'bg-orange-100 text-orange-600',
     },
     {
-      icon: Target,
-      title: 'Automação de Agendamentos',
-      stat: '45%',
-      description: 'Corte custos de agendamento em até 45%. Elimine conflitos e trocas intermináveis de mensagens.',
-      color: 'bg-pink-100 text-pink-600',
-    },
-    {
       icon: BarChart3,
       title: 'Decisões Inteligentes',
       stat: '20%',
       description: 'Empresas com análise preditiva registram até 20% de aumento nas vendas.',
       color: 'bg-cyan-100 text-cyan-600',
-    },
-    {
-      icon: ShieldCheck,
-      title: 'Menos Erros',
-      stat: '70%',
-      description: 'A IA pode reduzir falhas em processos manuais em até 70%, garantindo mais qualidade.',
-      color: 'bg-red-100 text-red-600',
     },
     {
       icon: Rocket,
@@ -62,17 +51,10 @@ export default function BeneficiosPage() {
       description: 'Aumente sua capacidade de atendimento em até 180% sem crescer proporcionalmente a equipe.',
       color: 'bg-indigo-100 text-indigo-600',
     },
-    {
-      icon: Heart,
-      title: 'Satisfação da Equipe',
-      stat: '94%',
-      description: 'Até 94% dos trabalhadores relatam que ferramentas de IA economizam tempo e permitem foco em atividades estratégicas.',
-      color: 'bg-yellow-100 text-yellow-600',
-    },
   ];
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-24 pb-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -111,32 +93,102 @@ export default function BeneficiosPage() {
             </motion.div>
           ))}
         </div>
+      </div>
 
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center"
-        >
-          <div className="bg-gradient-to-r from-[#7C3AED] to-[#5B21B6] p-12 rounded-3xl text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Pronto para transformar seu negócio?
-            </h2>
-            <p className="text-purple-100 mb-8 text-lg">
-              Conheça nossas automações e comece a economizar tempo hoje.
-            </p>
-            <a
-              href="https://wa.me/5551997055060?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20planos%20Ize."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white text-[#7C3AED] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors"
+      {/* MOVIDO PARA FORA DO CONTAINER - Por que fazemos isso? Section */}
+      <section className="py-20 bg-gray-50 mt-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
             >
-              <Rocket className="w-5 h-5" />
-              Falar com especialista
-            </a>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Você <span className="gradient-text">sabia?</span>
+              </h2>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-purple-600 to-[#510ac2] mt-3"></div>
+                  <p className="text-gray-600 text-lg leading-relaxed">
+                    No Brasil mais de 22 milhões de empresas utilizam o WhatsApp, e apenas <span className="gradient-text font-semibold">0.3%</span> delas utilizam agentes de IA.
+                  </p>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-purple-600 to-[#510ac2] mt-3"></div>
+                  <p className="text-gray-600 text-lg leading-relaxed">
+                    <span className="gradient-text font-semibold">68%</span> (14,9 milhões) das empresas não utilizam pelo <span className="gradient-text font-semibold">alto preço</span> que as plataformas cobram.
+                  </p>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-purple-600 to-[#510ac2] mt-3"></div>
+                  <p className="text-gray-600 text-lg leading-relaxed">
+                    Dessas 14,9 milhões de empresas, pelo menos <span className="gradient-text font-semibold">60%</span> são <span className="gradient-text font-semibold">pequenos empreendedores</span>, que poupam na contratação de funcionários.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl hover-lift">
+                <Image
+                  src="/img/benefits_graph.svg"
+                  alt="Por que fazemos isso"
+                  width={600}
+                  height={500}
+                  className="w-full h-auto"
+                  priority
+                />
+                {/* Decorative gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#7C3AED]/10 to-[#a3e635]/10 pointer-events-none"></div>
+              </div>
+              
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#a3e635]/20 rounded-full blur-2xl"></div>
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-[#7C3AED]/20 rounded-full blur-2xl"></div>
+            </motion.div>
           </div>
-        </motion.div>
+        </div>
+      </section>
+      <div className="bg-gray-50 pb-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-16 text-center"
+          >
+            <div className="bg-gradient-to-r from-[#9c63ff] to-[#510ac2] p-12 rounded-3xl text-white">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Pronto para transformar seu negócio?
+              </h2>
+              <p className="text-purple-100 mb-8 text-lg">
+                Conheça nossas automações e comece a economizar tempo hoje.
+              </p>
+              <Link
+                href="https://wa.me/5551997055060?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20planos%20Ize."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white text-[#7C3AED] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors"
+              >
+                <Rocket className="w-5 h-5" />
+                Falar com especialista
+              </Link>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </div>
   );

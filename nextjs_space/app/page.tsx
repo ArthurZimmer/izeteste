@@ -48,7 +48,7 @@ export default function Home() {
     {
       slug: 'whatsapp',
       icon: MessageCircle,
-      title: 'Respondedor de WhatsApp',
+      title: 'Bot de WhatsApp',
       description: 'Automatize respostas, qualifique leads e atenda clientes 24/7 no WhatsApp.',
       color: 'from-green-500 to-green-600',
       bgColor: 'bg-green-50',
@@ -56,24 +56,24 @@ export default function Home() {
     {
       slug: 'agendador',
       icon: Calendar,
-      title: 'Agendador de Eventos',
-      description: 'Gerencie agendamentos automaticamente para reuniões, consultas e serviços.',
+      title: 'Agendamento de Eventos',
+      description: 'Gerencie agendamentos automaticamente para reuniões, consultas ou serviços.',
       color: 'from-blue-500 to-blue-600',
       bgColor: 'bg-blue-50',
     },
     {
       slug: 'email',
       icon: Mail,
-      title: 'Organizador de E-mails',
-      description: 'Organize, priorize e responda e-mails automaticamente com IA.',
+      title: 'Gerenciador de E-mails',
+      description: 'Organize, priorize ou responda e-mails automaticamente com agentes de IA.',
       color: 'from-orange-500 to-orange-600',
       bgColor: 'bg-orange-50',
     },
     {
       slug: 'instagram',
       icon: Instagram,
-      title: 'Respondedor de Instagram',
-      description: 'Responda DMs, comentários e engaje seus seguidores automaticamente.',
+      title: 'Bot de Instagram',
+      description: 'Responda DMs, comentários e engaje seus seguidores sem fazer esforço.',
       color: 'from-pink-500 to-purple-600',
       bgColor: 'bg-pink-50',
     },
@@ -189,8 +189,9 @@ export default function Home() {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Nossas <span className="gradient-text">Automações</span></h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Escolha a categoria de automação que melhor atende seu negócio. 
-              Cada categoria possui soluções específicas para suas necessidades.
+              Escolha o plano que melhor atende seu negócio. 
+              Cada plano contém uma vasta gama de soluções específicas para suas necessidades. 
+              A baixo estão listadas algumas das mais populares automações que produzimos:
             </p>
           </motion.div>
 
@@ -223,19 +224,19 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-16 text-center"
+            className="mt-16 flex justify-center"
           >
-            <p className="text-gray-600 mb-4">
-              Quer um plano completo? Confira nossos planos com os melhores benefícios!
-            </p>
-            <Link
-              href="/planos"
-              className="inline-flex items-center gap-2 gradient-bg text-white px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-opacity"
-            >
-              Ver Planos
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </motion.div>
+          <div className="bg-gradient-to-br from-purple-400 via-purple-600 to-purple-400 rounded-3xl p-12 max-w-4xl w-full">
+            <div className="flex items-center justify-between gap-8">
+              <h2 className="text-white text-3xl font-bold flex-1">
+                Confira nossos planos com os melhores preços!
+              </h2>
+              <Link className="bg-[#ca94ff] text-white px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-opacity whitespace-nowrap flex items-center" href="/planos">
+                Ver planos <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
+        </motion.div>
         </div>
       </section>
     </div>
